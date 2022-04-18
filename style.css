@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+:root {
+    --accent: rgb(103, 49, 144);
+  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+#search {
+    position: absolute;
+    width: 50%;
+    height: 100px;
+    transform: translate(-50%,0);
+    left: 50%;
+    top:0;
+    background-color: var(--accent);
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
+}
+    #search input {
+        height: 100%;
+        width: 75%;
+        padding-left: 10px;
+    }
+        #search input:focus {
+            background-color: rgba(0, 0, 0, 0.517);
+            outline: 1px solid white;
+            border-radius: 0;
+            text-decoration: none;
+        }
+    #search button {
+        height: 100%;
+        width: 24%;
+        cursor: pointer;
+    }
+        #search button:hover {
+            background-color: rgba(0, 0, 0, 0.517);
+        }
+    #search input,button {
+        background-color: rgba(0, 0, 0, 0.408);
+        border:0;
+        color:white;
+        font-size: 2em;
+        display: inline-block;
+    }
+
+#found {
+    position: absolute;
+    background-color: var(--accent);
+    width: 50%;
+    left: 50%;
+    top: 100px;
+    transform: translate(-50%, 0);
+    margin-top: 50px;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 10px auto;
+}
+
+table {
+    width: 100%;
+    color: white;
+    text-align: left;
+}
+    table tr:first-child {
+        background-color: rgba(0, 0, 0, 0.387);
+        font-size: 20px;
+        text-align: center;
+    }
+
+.player {
+    color: rgb(255, 255, 255);
+    width: fit-content;
+    padding: 0.2em 0.5em;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 0 8px 8px 0;
+    border-radius: 5px;
+}
+
+.player:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 600px) {
+    #found {
+        border-radius: 0;
+        width: 100%;
+        /* height: calc(100% - 100px); */
+        margin-top: 0;
+    }
+    #search {
+        border-radius: 0;
+        width: 100%;
+    }
+    body {
+        background-color: var(--accent);
+    }
+}
